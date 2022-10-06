@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "pilha.c"
+#include "../Pilha/pilha.c"
 
 
 void Soma(int *n1, int t1, int *n2, int t2){
