@@ -56,11 +56,11 @@ void Imprimir1(TPilha *P1){
 
   while(!Vazia(*P1)){
     Desempilha(P1, &x);
+    ImprimirProduto(x);
     Empilha(x, &P2);
   }
   while(!Vazia(P2)){
     Desempilha(&P2, &x);
-    ImprimirProduto(x);
     Empilha(x, P1);
   }
   Libera(&P2);
@@ -73,13 +73,13 @@ void Imprimir2(TPilha *P1){
   int n1 = Tamanho(*P1);
   while(n1!=0){
     Desempilha(P1, &x);
+    ImprimirProduto(x);
     Empilha(x, &P2);
     n1--;
   }
   int n2 = Tamanho(P2);
   while(n2!=0){
     Desempilha(&P2, &x);
-    ImprimirProduto(x);
     Empilha(x, P1);
     n2--;
   }
